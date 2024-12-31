@@ -1,0 +1,17 @@
+replicaCount: 1
+
+image:
+  repository: mgarcesdev/fastapi-basic
+  pullPolicy: Always
+  tag: latest
+
+service:
+  type: NodePort
+  port: 8080
+
+ingress:
+  enabled: false
+  # Si activas el Ingress, configura aquí el host
+  # host: fastapi.example.com
+autoscaling:
+  enabled: false
